@@ -4,6 +4,7 @@ services:
   db:
     image: mysql:5.7
     hostname: mutillidae-db.local
+    container_name: mutillidae-db.local
     environment:
       MYSQL_ROOT_PASSWORD: mutillidae
       MYSQL_DATABASE: mutillidae
@@ -13,6 +14,7 @@ services:
     build: .
     image: mutillidae
     hostname: mutillidae.local
+    container_name: mutillidae.local
     depends_on:
       - db
     ports:
